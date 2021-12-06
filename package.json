@@ -1,0 +1,33 @@
+{
+  "name": "yatta",
+  "version": "1.0.0",
+  "description": "Yet Another Todo Tracking App",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trimagnus/yatta.git"
+  },
+  "keywords": [
+    "todo"
+  ],
+  "author": "trimagnus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trimagnus/yatta/issues"
+  },
+  "homepage": "https://github.com/trimagnus/yatta#readme",
+  "devDependencies": {
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0",
+    "webpack-merge": "^5.8.0"
+  }
+}
