@@ -1,3 +1,98 @@
-h1 {
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #eee;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-buttons button {
+  padding: 10px;
+}
+
+#delete-project-button {
   color: red;
+}
+
+.projects-container {
+  margin: 0 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  cursor: pointer;
+  padding: 15px 10px;
+  text-align: left;
+}
+
+ul li:hover {
+  background-color: #eee;
+}
+
+.completed-todo {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.project {
+  margin: 10px auto;
+  padding-top: 5px;
+  border: 1px solid black;
+  background-color: #eee;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  max-width: 800px;
+}
+
+.todo-checkbox {
+  margin-right: 6px;
+}
+
+.expand-container {
+  overflow: hidden;
+  background-color: white;
+}
+
+.expand-contract {
+  margin-top: -100%;
+  transition: all 0.5s;
+}
+
+.expanded {
+  margin-top: 0;
+}
+
+.expand-toggle {
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.expand-toggle-collapsed::after {
+  content: " +";
+}
+
+.expand-toggle-expanded::after {
+  content: " –";
+}
+
+.expand-toggle-collapsed::before {
+  content: "+ ";
+}
+
+.expand-toggle-expanded::before {
+  content: "– ";
 }
