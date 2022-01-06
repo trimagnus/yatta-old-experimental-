@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #eee;
+  margin-bottom: 10px;
+  padding: 20px 0;
+}
+
+.site-logo, .site-subheader {
+  text-align: center;
+}
+
+.site-subheader {
+  font-style: italic;
+}
+
+/* APP VIEW */
+.projects-container, .todo-list-container {
+  max-width: 300px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px #666;
+  user-select: none;
+}
+
+.project-li, .todo-item {
+  list-style-type: none;
+  font-size: 20px;
+  display: flex;
+  cursor: pointer;
+}
+
+.project-complete .project-title::after{
+  position:relative;
+  left: 4px;
+  top: -10px;
+  content: "(Complete!)";
+  font-size: 10px;
+  color: red;
+  
+}
+
+.project-li:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.project-li:last-child {
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.project-li:hover {
+  background-color: #eee;
+}
+
+.project-circle-indicator, .todo-circle-indicator {
+  width: 15px;
+  height: 15px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  margin: 3px 0 2px 2px;
+}
+
+.project-title-link {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 5px;
+}
+
+.project-item-count {
+  margin-left: auto;
+  color: grey;
+}
+
+/* Project View */
+.project-nav {
+  margin: 0 auto;
+  width: 300px;
+  height: 40px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.project-nav button {
+  flex-grow: 1;
+  font-size: 18px;
+}
+
+.todo-list-container {
+  border: 1px solid black;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.todo-list-container h2 {
+  text-align: center;
+  margin: 5px 0;
+  /* text-decoration: underline; */
+}
+
+.todo-item {
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
+}
+
+.todo-item:hover {
+  background-color: #eee;
+}
+
+.todo-item:last-child {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.todo-item[data-checked="true"] .checkable-item{
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.todo-item[data-checked="false"] .todo-checkbox::after {
+  content: "\205B";
+}
+
+.todo-item[data-checked="true"] .todo-checkbox::after {
+  content: "\205C";
+}
+
+#project-back-button::before {
+  content: "⇽ ";
+  line-height: 100%;
+}
+
+#project-delete-button {
+  color: red;
+}
