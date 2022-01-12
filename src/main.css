@@ -1,0 +1,206 @@
+:root {
+  --site-width: 600px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding: 20px 10px;
+  border-bottom: 1px solid grey;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--site-width);
+  margin: 0 auto;
+}
+
+.mainMenuContainer {
+  height: fit-content;
+  font-size: 30px;
+  cursor: pointer;
+  color: grey;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  padding: 0 2px;
+}
+
+.mainMenuContainer:hover {
+  color: black;
+}
+
+.logoContainer {
+  display: flex;
+  gap: 10px;
+  width: 270px;
+  align-items: center;
+}
+
+.logoContainer h2 {
+  border-left: 2px solid black;
+  padding-left: 10px;
+}
+
+main {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 20px;
+  font-family: sans-serif;
+  margin: 0 auto;
+  max-width: var(--site-width);
+}
+
+.hide {
+  display: none;
+}
+
+.projectControls {
+  display: flex;
+  gap: 10px;
+}
+
+.projectControls button {
+  width: 50px;
+  font-size: 32px;
+  line-height:0;
+  padding-bottom: 5px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* .projectControls #newProjectButton {
+  color: green;
+}
+
+.projectControls #deleteProjectButton {
+  color: red;
+} */
+
+.projectSelector {
+  font-size: 20px;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+.todoItemsContainer {
+  list-style-type: none;
+  margin-left: 20px;
+}
+
+.todoItem {
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.todoItem .todoCheckbox {
+  width: 30px;
+  height: 30px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.todoItem .todoCheckbox:hover {
+  border-color: black;
+}
+
+.todoItem .todoCheckbox:hover::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "✓";
+  color: grey;
+  font-size: 26px;
+}
+
+.todoItem .todoCheckbox.checked::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "✓";
+  color: grey;
+  font-size: 26px;
+}
+
+.todoItem .todoTitle {
+  padding: 20px 5px;
+  width: 100%;
+}
+
+.todoItem .todoTitle.checked {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.todoItem .todoTitle:hover {
+  border: 1px solid grey;
+  margin: -1px;
+}
+
+.addItemButton {
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  padding: 10px 40px;
+  width: fit-content;
+  cursor: pointer;
+  color: grey;
+  margin-left: 20px;
+}
+
+.addItemButton:hover {
+  color: black;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlayFormContainer {
+  background-color: #e9e9e9;
+  border: 1px solid #333;
+  box-shadow: 2px 1px 4px #333;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.newTodoHeader {
+  text-align: center;
+}
+
+.newTodoInput {
+  height: 30px;
+  margin: 10px 0;
+}
+
+.newTodoControls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.newTodoControls button {
+  width: 80px;
+  height: 30px;
+}
