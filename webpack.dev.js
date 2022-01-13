@@ -4,6 +4,11 @@ const {merge} = require('webpack-merge');
 
 module.exports = merge(common, {
   mode: 'development',
+  devServer: {
+    client: {
+      logging: 'warn',
+    },
+  },
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),

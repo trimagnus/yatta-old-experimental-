@@ -1,5 +1,26 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+} */
+
+#deleteTodoButton {
+  position: relative;
+  top: -10px;
+  left: -5px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  color: red;
+  background-color: white;
+  font-size: 10px;
+  font-weight: bold;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  
+}
+
+#deleteTodoButton:hover {
+  background-color: darkgrey;
+  color: white;
 }
